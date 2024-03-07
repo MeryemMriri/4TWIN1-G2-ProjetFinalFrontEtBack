@@ -6,11 +6,13 @@ pipeline{
    
   stages {
 
-  stage('test') {
+  stage('Install dependencies') {
       steps{
         
         script {
-         echo ('test')
+         sh ('cd DevOps_Project_Front')
+        sh ('npm install')
+ 
         }
       }
     }
