@@ -10,8 +10,11 @@ pipeline{
       steps{
         
         script {
-         sh ('cd DevOps_Project_Front')
-        sh ('npm install')
+          dir('DevOps_Project_Front')
+        {
+                        // Run npm install in the front-end directory
+        sh 'npm install'
+    }
  
         }
       }
